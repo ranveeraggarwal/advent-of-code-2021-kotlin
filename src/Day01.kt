@@ -1,22 +1,22 @@
 fun main() {
-    fun part1(input: List<String>): Int {
+    fun getLargerThanPreviouses(input: List<Int>): Int {
         var larger = 0
         for (i in 1 until input.size) {
-            if (input[i].toInt() > input[i-1].toInt()) {
+            if (input[i] > input[i - 1]) {
                 larger += 1
             }
         }
         return larger
     }
 
+    fun part1(input: List<String>): Int {
+        return getLargerThanPreviouses(input.map { it.toInt() })
+    }
+
     fun part2(input: List<String>): Int {
-        var larger = 0
-        for (i in 3 until input.size) {
-            if (input[i-3].toInt() + input[i-2].toInt() + input[i-1].toInt() < input[i-2].toInt() + input[i-1].toInt() + input[i].toInt()) {
-                larger += 1
-            }
-        }
-        return larger
+        return getLargerThanPreviouses(input.map { it.toInt() }
+            .windowed(size = 3, step = 1, partialWindows = false)
+            .map { it.sum() })
     }
 
     // test if implementation meets criteria from the description, like:
