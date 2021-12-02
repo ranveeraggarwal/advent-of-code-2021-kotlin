@@ -1,5 +1,7 @@
 # aoc-21-kotlin
 
+**Disclaimer**: I've never written Kotlin before this and will be going along learning from the documentation and other peoples' solutions as I go alone. I guess that's the point of AoC. 
+
 Welcome to the Advent of Code[^aoc] Kotlin project created by [ranveeraggarwal][github] using the [Advent of Code Kotlin Template][template] delivered by JetBrains.
 
 In this repository, ranveeraggarwal is about to provide solutions for the puzzles using [Kotlin][kotlin] language.
